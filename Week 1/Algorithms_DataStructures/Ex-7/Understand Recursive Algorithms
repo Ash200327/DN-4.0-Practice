@@ -1,0 +1,8 @@
+Recursion is when a function calls itself to solve smaller instances of a problem.
+
+Example Use Case:
+Predicting future financial value recursively can break the problem into smaller intervals.
+
+For instance:
+If you have an initial amount P and a growth rate r, the value after n years is:
+FV(n) = FV(n - 1) * (1 + r)

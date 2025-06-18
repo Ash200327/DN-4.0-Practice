@@ -1,0 +1,6 @@
+Linear Search: O(n), simple, works on unsorted arrays.
+
+Binary Search: O(log n), much faster, requires sorted input.
+
+Best Choice for E-commerce
+Binary search is preferred for optimized performance in large, sorted datasets (especially with millions of products).

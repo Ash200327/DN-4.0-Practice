@@ -1,0 +1,14 @@
+Time Complexity
+Basic recursion:
+
+Time: O(n)
+Space: O(n) (due to call stack)
+
+Memoized recursion:
+Time: O(n)
+Space: O(n) (memo array + call stack)
+
+Optimization Discussion
+Recursion is elegant but can be inefficient if recomputation occurs.
+Memoization avoids redundant calculations and is preferred for large n.
+Iterative solutions are even more efficient in Java for production use.

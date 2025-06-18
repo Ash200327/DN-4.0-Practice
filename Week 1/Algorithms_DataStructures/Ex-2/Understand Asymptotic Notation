@@ -1,0 +1,7 @@
+Big O Notation helps analyze the performance of algorithms based on input size n.
+Search cases:
+
+Case	Linear Search (O)	Binary Search (O)
+Best	 O(1)	            O(1)
+Average	 O(n)	            O(log n)
+Worst	 O(n)	            O(log n)
