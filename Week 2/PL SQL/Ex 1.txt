@@ -1,0 +1,37 @@
+-- Scenario 1: Apply 1% discount to loan interest for customers over 60
+BEGIN
+    FOR rec IN (
+        SELECT c.CustomerID, l.LoanID, l.InterestRate
+        FROM Customers c
+        JOIN Loans l ON c.CustomerID = l.CustomerID
+        WHERE MONTHS_BETWEEN(SYSDATE, c.DOB) / 12 > 60
+    ) LOOP
+        UPDATE Loans
+        SET InterestRate = InterestRate - 1
+        WHERE LoanID = rec.LoanID;
+    END LOOP;
+END;
+/
+
+-- Scenario 2: Promote customers with balance > 10000 to VIP
+BEGIN
+    FOR rec IN (SELECT CustomerID FROM Customers WHERE Balance > 10000) LOOP
+        UPDATE Customers
+        SET IsVIP = 'Y'
+        WHERE CustomerID = rec.CustomerID;
+    END LOOP;
+END;
+/
+
+-- Scenario 3: Print reminders for loans due in next 30 days
+BEGIN
+    FOR rec IN (
+        SELECT l.LoanID, c.Name, l.EndDate
+        FROM Loans l
+        JOIN Customers c ON c.CustomerID = l.CustomerID
+        WHERE l.EndDate <= SYSDATE + 30
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE('Reminder: Loan ID ' || rec.LoanID || ' for ' || rec.Name || ' is due on ' || TO_CHAR(rec.EndDate, 'DD-MON-YYYY'));
+    END LOOP;
+END;
+/
