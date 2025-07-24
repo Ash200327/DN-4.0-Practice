@@ -1,0 +1,58 @@
+1. Define SPA and its Benefits
+SPA (Single-Page Application) is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the app, without reloading the page.
+Benefits:
+Faster navigation (no full-page reloads)
+Improved user experience (smooth and responsive)
+Efficient data loading (only fetches data needed via APIs)
+Reusable components (cleaner code structure)
+Client-side rendering reduces server load
+
+2. Define React and Identify Its Working
+React is a JavaScript library for building user interfaces, especially for Single-Page Applications. It lets developers build UI using components.
+How React Works:
+Uses components (reusable, independent blocks)
+Manages changes efficiently using the virtual DOM
+Uses JSX, a syntax extension that combines HTML with JavaScript
+Renders UI dynamically and updates only the required parts
+
+3. Differences Between SPA and MPA
+Feature	SPA (Single Page Application)	MPA (Multi Page Application)
+Page Loading	Loads a single HTML page	Loads a new HTML page per request
+Speed	Faster due to dynamic updates	Slower due to full-page reloads
+User Experience	Smooth and seamless	May flicker on navigation
+Backend Involvement	Mostly frontend handled	Heavy server-side rendering
+Example Frameworks	React, Angular, Vue	PHP, ASP.NET, JSP
+
+4. Pros & Cons of Single-Page Application
+Pros:
+Smooth user experience
+Fast loading after initial load
+Easy to turn into mobile apps (using tools like React Native)
+Efficient use of bandwidth
+Cons:
+Poor SEO by default (harder to index)
+Browser back/forward behavior needs custom handling
+Initial load time may be high
+JavaScript dependency (may fail if JS is disabled)
+
+5. Explain About React
+React is a declarative, efficient, and flexible JavaScript library developed by Facebook.
+It is used for building user interfaces, especially for SPAs.
+React promotes component-based architecture, where UIs are broken into small, reusable components.
+Uses virtual DOM for high-performance rendering.
+
+6. Define Virtual DOM
+The Virtual DOM (V-DOM) is a lightweight copy of the actual DOM that React uses.
+How it Works:
+React creates a virtual DOM tree representation.
+When data changes, it compares (diffs) the new V-DOM with the previous one.
+Only the changed parts are updated in the real DOM (efficient and fast).
+
+7. Features of React
+Component-Based: Build encapsulated components.
+JSX: Write HTML-like code in JavaScript.
+Virtual DOM: Efficient UI updates.
+Unidirectional Data Flow: Predictable behavior.
+Declarative: Describe UI and React takes care of rendering.
+Hooks: Functional way to manage state and side effects.
+React Native: Build native mobile apps using React.

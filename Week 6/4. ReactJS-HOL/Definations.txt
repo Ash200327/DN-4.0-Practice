@@ -1,0 +1,32 @@
+1. Need and Benefits of Component Life Cycle
+Need:
+Component lifecycle methods help developers:
+Control what happens before, during, and after a component renders.
+Perform tasks like data fetching, DOM manipulation, and cleanup at the right time.
+Benefits:
+Efficient resource management (e.g., cleaning up timers or listeners)
+Smooth data loading and state updates
+Better error handling
+Improved performance control
+
+2. Various Lifecycle Hook Methods (Class Components)
+Phase	Method	Purpose
+Mounting	constructor()	Initialize state
+componentDidMount()	Run code after component is added to DOM
+Updating	shouldComponentUpdate()	Decide if re-render is needed
+componentDidUpdate()	Run code after component updates
+Unmounting	componentWillUnmount()	Cleanup tasks (e.g., timers, listeners)
+Error Handling	componentDidCatch()	Catch and handle errors in children
+
+3. Sequence of Steps in Rendering a Component (Class Component)
+Mounting Phase:
+constructor()
+render()
+componentDidMount()
+
+Updating Phase (when props/state change):
+shouldComponentUpdate()
+render()
+componentDidUpdate()
+Unmounting Phase:
+componentWillUnmount()

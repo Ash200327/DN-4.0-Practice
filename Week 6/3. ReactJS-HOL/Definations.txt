@@ -1,0 +1,46 @@
+React Components:
+React components are reusable blocks of UI. They return JSX and help build complex interfaces by combining smaller pieces.
+
+Components vs JavaScript Functions:
+React Components	JavaScript Functions
+Return JSX (UI)	Return values (data, strings)
+Used to build UI	Used for logic/calculations
+Have lifecycle methods	No lifecycle
+Can use hooks (functional)	Hooks not applicable
+
+Types of Components:
+Class Components
+Function Components
+Class Component
+Uses ES6 class, includes render() method, supports state and lifecycle methods.
+jsx
+class Demo extends React.Component {
+  render() {
+    return <h1>Hello</h1>;
+  }
+}
+
+Function Component:
+A simpler way using plain functions, can use hooks for state and effects.
+
+jsx
+function Demo() {
+  return <h1>Hello</h1>;
+}
+
+Component Constructor:
+Used in class components to initialize state and bind methods.
+
+jsx
+constructor(props) {
+  super(props);
+  this.state = { count: 0 };
+}
+
+render() Function:
+Required in class components. It returns JSX to define what gets displayed on the screen.
+
+jsx
+render() {
+  return <h1>Hello</h1>;
+}

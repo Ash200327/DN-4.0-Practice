@@ -1,0 +1,76 @@
+1. Explain React Components
+React components are the building blocks of any React application.
+They let you split the UI into independent, reusable pieces, each with its own structure and behavior.
+Think of components as custom HTML tags.
+They accept inputs (called props) and return React elements describing what should appear on the screen.
+
+2. Differences Between Components and JavaScript Functions
+Feature	React Components	JavaScript Functions
+Purpose	Build UI and handle interactions	Perform specific logic/calculations
+Output	Return JSX (React elements)	Return values like numbers, strings, etc.
+Lifecycle	Have lifecycle methods (in class components)	No lifecycle
+React Hooks	Can use hooks (in functional components)	Hooks not applicable
+Integration	Part of the React DOM	Not tied to UI or React
+
+3. Types of Components in React
+React has two main types of components:
+Class Components
+Function Components
+
+4. Explain Class Component
+A class component is a more traditional way to define a component using the class keyword.
+Syntax:
+jsx
+import React, { Component } from 'react';
+
+class Welcome extends Component {
+  render() {
+    return <h1>Hello from Class Component</h1>;
+  }
+}
+Key Points:
+Must extend React.Component
+Must define a render() method
+Can use state and lifecycle methods
+
+5. Explain Function Component
+A function component is a simpler way to write components using JavaScript functions.
+Syntax:
+jsx
+function Welcome() {
+  return <h1>Hello from Function Component</h1>;
+}
+
+Or using arrow functions:
+
+jsx
+
+const Welcome = () => <h1>Hello from Function Component</h1>;
+Key Points:
+Stateless (before hooks), but now can use hooks (useState, useEffect, etc.)
+Easier and more readable
+Preferred in modern React
+
+6. Define Component Constructor
+The constructor is a special method used in class components to:
+Initialize state
+Bind event handlers
+Syntax:
+jsx
+constructor(props) {
+  super(props); // always call super(props)
+  this.state = {
+    name: 'John'
+  };
+}
+
+7. Define render() Function
+The render() method is required in class components. It tells React what to display on the screen.
+Syntax:
+jsx
+render() {
+  return <h1>Hello World</h1>;
+}
+Key Points:
+Must return JSX
+Gets called every time the component updates or re-renders
