@@ -1,0 +1,70 @@
+• Features of ES6:
+
+Block-scoped variables (let, const)
+Arrow functions (()=>)
+Classes and inheritance
+Template literals
+Destructuring
+Default parameters
+Spread/rest operators
+Modules (import, export)
+Promises
+Enhanced object literals
+Map and Set collections
+
+• Explain JavaScript let
+let declares block-scoped variables. It is not hoisted like var and avoids redeclaration in the same scope.
+
+let x = 10;
+
+• Differences between var and let
+Feature	var	let
+Scope	Function-scoped	Block-scoped
+Hoisting	Yes (initialized as undefined)	No (Temporal Dead Zone)
+Redeclaration	Allowed	Not allowed in same scope
+
+• Explain JavaScript const
+const declares a block-scoped constant. Its value cannot be reassigned. For objects and arrays, the reference is constant, but internal data can change.
+
+const PI = 3.14;
+
+• ES6 Class Fundamentals
+Classes provide a blueprint for creating objects using constructor functions and methods.
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    return `Hello, ${this.name}`;
+  }
+}
+
+• ES6 Class Inheritance
+Inheritance allows a class to extend another class using extends and super().
+
+class Student extends Person {
+  constructor(name, grade) {
+    super(name);
+    this.grade = grade;
+  }
+
+  info() {
+    return `${this.name} is in grade ${this.grade}`;
+  }
+}
+
+• Define ES6 Arrow Functions
+Arrow functions provide a shorter syntax for functions and do not bind their own this.
+
+const add = (a, b) => a + b;
+• Identify set() and map()
+Set: A collection of unique values.
+
+const mySet = new Set([1, 2, 2, 3]); // Set {1, 2, 3}
+Map: A key-value pair collection.
+
+const myMap = new Map();
+myMap.set('a', 1);
+myMap.set('b', 2);

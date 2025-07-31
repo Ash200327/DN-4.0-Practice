@@ -1,0 +1,65 @@
+1. Various Ways of Conditional Rendering in React:
+Using if/else statements:
+
+if (isLoggedIn) {
+  return <Dashboard />;
+} else {
+  return <Login />;
+}
+Using ternary operator:
+
+return isLoggedIn ? <Dashboard /> : <Login />;
+Using logical AND (&&):
+
+
+return isAdmin && <AdminPanel />;
+Using switch-case inside a function:
+Useful for multiple conditions.
+
+2. How to Render Multiple Components:
+Can render multiple components by wrapping them in a parent element like <div>, <> (Fragment), or using an array of components.
+
+return (
+  <>
+    <Header />
+    <Content />
+    <Footer />
+  </>
+);
+3. Define List Component:
+A List component renders a list of items using .map().
+
+function NameList(props) {
+  const names = props.names;
+  return (
+    <ul>
+      {names.map((name) => <li key={name}>{name}</li>)}
+    </ul>
+  );
+}
+
+4. Keys in React Applications:
+Keys help React identify which items changed, added, or removed. They must be unique among siblings. Using key improves performance in dynamic lists.
+
+<li key={user.id}>{user.name}</li>
+
+5. How to Extract Components with Keys:
+Can extract repeated JSX blocks into separate components and pass the key as a prop.
+
+function User(props) {
+  return <li>{props.name}</li>;
+}
+
+function UserList(props) {
+  return (
+    <ul>
+      {props.users.map(user => <User key={user.id} name={user.name} />)}
+    </ul>
+  );
+}
+
+6. React Map, map() Function:
+React uses JavaScript’s map() function to render lists. It loops through an array and returns a new array of elements.
+
+const items = ['Apple', 'Banana', 'Cherry'];
+const list = items.map(item => <li key={item}>{item}</li>);

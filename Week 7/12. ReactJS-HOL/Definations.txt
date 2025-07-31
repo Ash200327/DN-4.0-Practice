@@ -1,0 +1,23 @@
+1. Conditional Rendering in React:
+Conditional rendering lets you show or hide components or elements based on conditions. It works like regular JavaScript if statements using ternary operators, logical &&, or if-else blocks.
+
+2. Element Variables:
+Element variables are used to store JSX in a variable. You can conditionally assign different JSX elements to the variable and render it in the return().
+
+let button;
+if (isLoggedIn) {
+  button = <LogoutButton />;
+} else {
+  button = <LoginButton />;
+}
+return <div>{button}</div>;
+
+3. Preventing Component Rendering:
+To prevent a component from rendering, return null from the component function. It renders nothing on the UI.
+
+function Warning(props) {
+  if (!props.showWarning) {
+    return null;
+  }
+  return <div>Warning!</div>;
+}
