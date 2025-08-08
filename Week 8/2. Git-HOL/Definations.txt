@@ -1,0 +1,20 @@
+What is .gitignore?
+.gitignore is a special file in a Git project that tells Git which files or folders to ignore (i.e., not track or commit).
+
+Why use .gitignore?
+To avoid committing:
+Temporary files (e.g., .log, .tmp)
+IDE/editor files (e.g., .vscode/, *.sublime-workspace)
+OS-specific files (e.g., Thumbs.db, .DS_Store)
+Secrets/configs (e.g., .env, config.json)
+
+How to use .gitignore (Simple Steps):
+Create a file named .gitignore in your project folder.
+Add patterns for files/folders you want to ignore.
+
+Example .gitignore content:
+
+*.log         # ignore all .log files
+node_modules/ # ignore node_modules folder
+.env          # ignore .env file
+*.tmp         # ignore all .tmp files

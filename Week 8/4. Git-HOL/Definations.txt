@@ -1,0 +1,26 @@
+How to Resolve Merge Conflicts in Git :
+A merge conflict happens when two branches have conflicting changes in the same part of a file and Git cannot decide which one to keep.
+When it happens:
+You’ll see this message during git merge:
+
+CONFLICT (content): Merge conflict in filename.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Steps to Resolve Merge Conflicts:
+1. Open the conflicting file
+It will look like this:
+
+<<<<<<< HEAD
+This is from current branch (e.g., master)
+=======
+This is from the merging branch (e.g., feature)
+>>>>>>> feature
+
+2. Edit the file manually
+Decide what to keep, remove the conflict markers (<<<<<<<, =======, >>>>>>>), and save the file.
+
+3. Mark the conflict as resolved
+git add filename.txt
+
+4. Commit the merge
+git commit -m "Resolved merge conflict in filename.txt"

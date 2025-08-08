@@ -1,0 +1,22 @@
+How to Clean Up and Push Back to Remote Git:
+1. Clean Up Locally
+After resolving merge conflicts and deleting unused branches:
+Delete local merged branches:
+
+git branch -d branch-name
+
+Remove untracked files:
+
+git clean -f
+
+Remove ignored files too :
+
+git clean -fdX
+
+2. Push Local Changes to Remote
+Make sure you're on the correct branch (e.g., master or main):
+
+Push commits to remote:
+
+git push origin master
+
